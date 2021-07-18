@@ -1,16 +1,29 @@
 /* globals SVG */
-const canvasW = 512;
-const canvasH = 512;
+import { constrainImgDims, imgToPixelBlocks } from './src/imutils.js';
+
+let img;
+const imgPath = './sonofman.jpg';
+
+const imgScl = 5;
+let pixelBlocks;
+
+window.preload = () => {
+  img = loadImage(imgPath);
+};
 
 window.setup = () => {
-  createCanvas(canvasW, canvasH, SVG);
+  constrainImgDims(img);
+  createCanvas(img.width, img.height, SVG);
 
   noFill();
-
   stroke(0);
   strokeWeight(2);
+
+  pixelBlocks = imgToPixelBlocks(img, imgScl);
 };
 
 window.draw = () => {
-  ellipse(width / 2, height / 2, 100, 100);
+  clear();
+  pixelBlocks.forEach((pb) => pb.draw());
+  noLoop();
 };
