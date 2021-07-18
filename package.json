@@ -1,0 +1,27 @@
+{
+  "name": "fallingpixelblocks",
+  "version": "1.0.0",
+  "description": "Maybe an over ambitious morning motivation fueled idea...",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamSpannbauer/fallingPixelBlocks.git"
+  },
+  "author": "Adam Spannbauer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AdamSpannbauer/fallingPixelBlocks/issues"
+  },
+  "homepage": "https://github.com/AdamSpannbauer/fallingPixelBlocks#readme",
+  "devDependencies": {
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
+  },
+  "dependencies": {
+    "eslint-config-p5js": "^1.1.0"
+  }
+}
